@@ -19,10 +19,10 @@ def chat():
     try:
         data = request.get_json()
 
-        user_message = data["message"]
+        user_message = data.get("message")
 
         completion = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
             messages=[
                 {
                     "role": "user",
@@ -38,7 +38,7 @@ def chat():
         })
 
     except Exception as e:
-        print("ERROR:", e)
+        print("ERROR:", str(e))
 
         return jsonify({
             "error": str(e)
