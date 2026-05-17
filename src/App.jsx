@@ -206,7 +206,7 @@ export default function App() {
 setBusy(true);
 
 try {
-  const response = await fetch("https://zeus-ai-45ql.onrender.com/chat", {
+  const response = await fetch("https://zeus-ai-5p9x.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
